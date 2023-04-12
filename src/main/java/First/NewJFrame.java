@@ -99,7 +99,7 @@ public int score=0;
 
     //uzzīmē gājienu balstoties uz HashMap
     public void drawTurn(HashMap<Integer,Unit> map) throws IOException{
-           System.out.println("draw");
+           
         Unit temp;
         JButton button;
         ImageIcon icon;
@@ -118,7 +118,6 @@ public int score=0;
                 else{
                     imageName+="Red.png";
                 }
-                //System.out.println("resources/"+imageName);
                 icon = new ImageIcon("src/resources/"+imageName);
                 
                 button.setIcon(icon);
@@ -416,7 +415,7 @@ public int score=0;
     public void pTurn(String unit, String tile){
         if(AIBlue!=BlueTurn&&canMakeTurn(parseInt(unit),parseInt(tile),gameMap,BlueTurn)){
             try {
-                System.out.println("pTurn");
+                
                 //maina spēlētāju gājienus
                 BlueTurn=!BlueTurn;
                 gameMap=makeTurn(parseInt(unit),parseInt(tile),gameMap);
